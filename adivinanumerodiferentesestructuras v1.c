@@ -4,15 +4,8 @@ int main() {
     int numeroAdivinar = 123;
     int numeroIngresado;
     char respuesta = 's';
-    int intentosMaximos = 5;
-    int intentosRealizados = 0;
 
-    for (; respuesta == 's' || respuesta == 'S'; intentosRealizados++) {
-        if (intentosRealizados >= intentosMaximos) {
-            printf("Agotaste el numero máximo de intentos. El numero era %d\n", numeroAdivinar);
-            break;
-        }
-
+    while (respuesta == 's' || respuesta == 'S') {
         printf("Adivina el numero: ");
         scanf("%d", &numeroIngresado);
 
